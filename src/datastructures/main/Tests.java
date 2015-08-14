@@ -114,10 +114,7 @@ public class Tests {
         System.out.println("peek: " + queue.peek());
         System.out.println(queue);
 
-        String s = "ABCSamZhubBXyzxYZabcaBc";
-        String s2 = "cbcbc";
-        System.out.println(replaceAll("abc", s, "xYYz"));
-
+        
 //        List<Integer> lista = new ArrayList<Integer>();
 //        A<Integer> a = new A<Integer>();
 //        lista.add(a.getNumber());
@@ -133,23 +130,6 @@ public class Tests {
 //        int[] a2 = {18, 15, 21, 16, 22};
 //        System.out.println("expectedDifferenceCounter: " + expectedDifferenceCounter(a, 3));
 //        //System.out.println("expectedDifferenceCounter2: " + expectedDifferenceCounter2(a, 3));
-    }
-
-    public static String replaceAll(String reggex, String text, String replaceWith) {
-        System.out.println("original\n" + text);
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < text.length();) {
-            String t = text.substring(i, reggex.length() + i <= text.length() ? reggex.length() + i : i);
-            if (reggex.equalsIgnoreCase(t)) {
-                sb.append(replaceWith);
-                i += reggex.length();
-            } else {
-                sb.append(text.charAt(i));
-                i++;
-            }
-        }
-        System.out.println(sb.toString());
-        return sb.toString();
     }
 
     public static String replaceAllFer(String origStr, String target, String replacement) {
@@ -242,14 +222,5 @@ public class Tests {
         System.out.println("operations:" + counter2);
         return counter;
 
-    }
-}
-
-class A<T> {
-
-    private T number;
-
-    public T getNumber() {
-        return number;
     }
 }
